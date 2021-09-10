@@ -1,0 +1,122 @@
+/* 
+- Red: hsl(0, 78%, 62%)
+- Cyan: hsl(180, 62%, 55%)
+- Orange: hsl(34, 97%, 64%)
+- Blue: hsl(212, 86%, 64%)
+
+### Neutral
+
+- Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%)
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  background-color: hsl(0, 0%, 98%);
+}
+
+main {
+  padding: 0 30px;
+}
+
+header {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto 40px;
+ 
+}
+
+header h1 {
+  font-weight: 200;
+}
+header h2 {
+  font-weight: 600;
+  font-size: 30px;
+}
+header p {
+  margin: 20px 0;
+}
+section {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.row .col {
+  width: calc(90% / 3 );
+  
+}
+.row .col .card {
+  position: relative;
+  box-shadow: 0 14px 20px -6px hsl(229deg 6% 66% / 38%);
+  border-top: 4px solid;
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.row .col .card.green {
+  border-color: hsl(180, 62%, 55%);
+}
+.row .col .card.red {
+  border-color: hsl(0, 78%, 62%);
+}
+.row .col .card.yellow {
+  border-color: hsl(34, 97%, 64%);
+}
+.row .col .card.blue {
+  border-color: hsl(212, 86%, 64%);
+}
+
+.row .col .card h3 ,.row .col .card p{
+  margin-bottom: 15px;
+}
+.row .col .card p{
+  color : #C2C1C6;
+  font-size: 13px;
+  max-width: 250px;
+}
+
+.row .col .card span{
+  display: block;
+  text-align: right;
+}
+
+
+@media screen and (max-width : 767px){
+  .row .col{
+    width: 100%;
+    margin: 0
+
+  }
+  .row .col .card{
+    margin: 0 0 20px ;
+  }
+  header > *:not(:last-child){
+    font-size: 20px !important;
+  }
+  header p {
+    font-size: 15px;
+  }
+}
